@@ -1,0 +1,254 @@
+# Posession or ownership
+# Quantity or number
+# Quality or opinion
+# Size
+# Age
+# Shape
+# Color
+# Proper adjective (often nationality, other place of origin, or material)
+# Purpose or qualifier
+
+# Owners or articles
+#* {"name":"owner", "exclude": "quantity singluar", "max":1}
+her his my our their your the
+
+#* {"name":"quantity", "plural":true, "exclude":"singlular owner", "max":1}
+abundant bountiful incalculable limited many myriad
+numerous scarce several sparse substantial two three four five
+six seven eight nine ten elevent twelve thirteen fourteen fifteen
+sixteen seventeen eighteen nineteen twenty
+
+#* {"name":"singluar", "plural":false, "exclude": "quantity owner", "max":1}
+one sole
+
+#* {"name":"timing"}
+annual daily monthly occasional weekly frequent
+
+#* {"name":"quality"}
+accomplished adept admirable adored adroit advantageous agreeable
+amazing amiable amoral astonishing astounding atrocious awesome awful
+baffling beneficial benevolent bewildering breathtaking brilliant
+brutal capable capital captivating catchy cheating cherished
+commendable complementary conniving contorted cordial correct
+courteous crafty creative credible creepy crooked dainty daunting
+dazzling dear delightful diabolical dim disgraceful disgusting
+dishonest disloyal disturbing dreadful effective efficient elegant
+engrossing enthralling esteemed evil excellent exciting exemplary
+experienced expert exquisite extraordinary fabulous fantastic
+fascinating favorable ferocious fiendish foul friendly frightening
+gallant genial ghastly gleaming glimmering glistening glittering
+gloomy glorious glowing godly golden gripping grotesque gruesome
+harmonious harsh haughty heavenly heinous held hideous homely honest
+horrible horrifying idolized imaginative impious inconceivable
+incredible infernal ingenious innocent innovative intriguing inventive
+kind knowledgeable laudable licentious luscious lustrous magnificent
+majestic marred marvelous melodious monstrous moral murky mysterious
+noble novel nutritious obedient obnoxious obscure outrageous
+outstanding personable pleasant praiseworthy prized productive
+proficient profitable pure puzzling qualified radiant refreshing
+regrettable remarkable repulsive resourceful respectable revered
+revolting righteous roguish saintly savage scrupulous select shadowy
+shady shimmering shocking significant sinister sizeable sleek sly
+sordid sparkling spectacular splendid succulent super superb superior
+tantalizing terrific topnotch trustworthy twinkling unbelievable
+unequalled unique unpleasant unrighteous unrivaled unscrupulous
+unsightly untrustworthy uppity upright upstanding vibrant vile
+virtuous vivid weird well-mannered wholesome wicked wily wonderful
+worthwhile wretched
+
+#* {"name":"texture"}
+abrading abrasive acute affected angular as bald ballooned barbed bendable
+blemished blistered bloated blunt boiling boiling bolstered bouncy breezy
+bristly broken broken bubbly bulging bulky bumpy bumpy burning burnished
+bushy caked caressing carved chafing channeled chapped cheap chilly chilly
+chunky clammy clean coagulated coarse cold cold concentrated cool cool
+corduroy corrugated cottony cozy cratered crawly creamy creepy creepy
+crocheted crooked crooked crude crumbly cuddly cuddly curdled curly cushioned
+cut cutting damaged damaged damp damp dank decorated dehydrated dense dented
+dirt-free dirty dirty disfigured distended downy drenched dripping dry dry
+dull durable dusty dusty elastic emblazoned embossed enameled encrusted
+engorged engraved enlarged etched even expanded extreme fat feathery fiery
+filmy filthy filthy fine finish firm fizzy flaky flat flattened flawed
+flawless fleecy fluffy fluffy fluted foamy freezing freezing fresh frigid
+frothy furred furry fuzzy gelatinous glass glassy glazed glossy glutinous
+gooey gossamer grainy granular grating gravelly greasy greasy grimy grinding
+gritty grooved grubby grungy hairy hard harsh heated hot hot icy icy
+ill-defined immaculate impenetrable imperfect imprecise imprinted in indented
+inflated inflexible inlaid inscribed inset ironed irregular itching itchy
+jagged jarring jumbled keen kiss knitted knobbed lacy layered level limp lined
+longhaired loose lustrous malleable marked matte matted melted mild moist
+mosaic mucky mushy muted mutilated neat nonglossy not numbing ornamented
+padded parched patterned perfect pitted pleated pliable plush pocked
+pockmarked pointed pointy polished potholed pressed prickly prickly printed
+puffed pulpy pure ragged raw razor refined ribbed ridged rigid rough rough
+runny rutted sandy sanitary satiny saturated scalding scaled scarred
+scorching scored scraped scratched scratching scratchy sculptured searing
+serrated set severe shaggy shaggy sharp sharp sharp-edged sheer shiny silky
+silky-smooth sleek slick slight slimy slimy slippery smooth smoothed smudged
+snarling soaked soaking soapy sodden soft soggy soiled solid sopping
+sparkling spick-and-span spikey spiny splintered spongy spotless springy
+squishy stamped steamed steely sterile sticky sticky stiff stinging strong
+strong stubbly swollen syrupy tangled thick thin thorny tickling tidy tight
+tiled tingly toothed tough tweedy unblemished unbreakable uncomfortable
+uncompromising undulation uneven uneven unsoiled untarnished unyielding up
+varnished velvety veneered viscous warm warm waterlogged wavy waxy weak
+well-defined well-honed wet wet withered wooden wool woolen woolly woven
+yielding
+
+#* {"name":"appearance"}
+adorable attractive bald beautiful chubby clean dazzling drab elegant fancy
+fit flabby glamorous gorgeous handsome long magnificent muscular
+old-fashioned plain plump quaint scruffy shapely short skinny sparkling
+stocky ugliest ugly unkempt unsightly wide-eyed
+
+#* {"name":"shape"}
+broad chubby crooked curved deep flat full heavy high hollow low narrow refined round
+shallow skinny square steep straight wide
+
+#* {"name":"size"}
+big colossal compact diminutive elfin enormous fat gargantuan gigantic great
+hefty huge immense insignificant large little mammoth massive microscopic
+miniature minimal miniscule minute negligible petite plump puny scrawny short
+sizeable slight small substantial tall teeny teeny-tiny tiny vast
+
+#* {"name":"common"}
+able bad big different early good great high important large last
+little long new next old other own public right same small young
+
+#* {"name":"sound"}
+cooing crashing deafening echoing faint harsh hissing howling loud melodic
+noisy purring quiet rapping raspy rhythmic screeching shrilling squeaking
+thundering tinkling voiceless wailing whining whispering
+
+#* {"name":"time"}
+ancient brief early fast future late long modern old old-fashioned
+prehistoric quick rapid short slow swift young
+
+#* {"name":"taste"}
+acidic appetizing bitter cool creamy delicious disgusting fresh greasy hot
+icy juicy loose melted moldy nutritious nutty prickly putrid rainy rancid
+ripe rotten salty savory sour spicy spoiled stale sticky strong sweet tangy
+tart tasteless tasty uneven weak wet wooden yummy
+
+#* {"name":"colour"}
+alabaster albino amber amethyst aquamarine ashy aubergine auburn avocado azure
+beige bisque black blonde blue blush bordeaux brass brick bronze brown buff
+burgundy caramel carmine carnelian cerise cerulean champagne charcoal
+chartreuse chestnut chocolate cinnamon citrine claret clear cobalt cocoa
+copper coral cranberry cream crimson cyan dark drab dull dusty ebony ecru
+eggplant eggshell emerald flax fuchsia gold gray green henna hyacinth
+hydrangea icy indigo iridescent ivory jade jet khaki lapis lavender lemon light
+lilac lime magenta maize mango maroon mauve melon mink mint mocha mulberry mustard
+navy nutmeg oatmeal ochre olive opal opaque orange orchid oyster pale paprika
+pastel peach pearl periwinkle persimmon pewter pink platinum plum poppy
+primrose puce pumpkin purple rainbow raspberry raven red rose rouge ruby
+ruddy russet rust sable saffron sage salmon sand sapphire scarlet seashell
+secondary sepia shade shamrock sienna silver slate spectrum spruce steel
+stone straw strawberry tan tangerine taupe teal terracotta thistle tomato
+topaz turquoise ultramarine umber vanilla verdant verdigris vermeil vermilion
+violet viridian watermelon white yellow
+
+#* {"name":"material"}
+chrome crystalline denim linen mahogany obsidian
+
+# Correct Horse will try to correctly form the singular or plural form of words
+# in groups with the "pluralise" flag set. For irregular words the
+# stem, singular suffix and plural suffix can be provided separated
+# by a vertical bar, e.g. p|erson|eople, piano||s, sheep||
+  
+#* {"name":"nouns", "min":1, "max":2, "pluralise":true}
+account achievement acoustics|| act action activity actor addition
+adjustment advertisement advice aftermath afternoon afterthought
+agreement air airplane airport alarm alley amount amusement anger
+angle animal answer ant apparatus apparel apple appliance
+approval arch argument arithmetic arm army art attack attempt
+attention attraction authority back badge bag bait
+balance ball balloon banana band base baseball basin basket
+basketball bat battery bath battle bead beam bean bear beast bed
+bedroom bee beef beetle beginner behavior belief believe
+bell berry bike bird birth birthday bit bite blade
+blood blow board boat body bomb bone book boot border
+bottle boundary box brain brake branch brass bread breakfast
+breath brick bridge brush bubble bucket building bulb
+bun burn burst bushes business butter button cabbage cable cactus cake
+calculator calendar camera camp can cannon canvas cap caption
+car card care carp|| carriage cart cast cat cattle cause
+cave celery cellar cemetery cent chain chair chalk chance
+change channel cheese cherry chess chicken 
+chin church circle clam class clock cloth cloud clover
+club coach coal coast coat cobweb cod|| coil collar color comb comfort
+committee company comparison competition condition connection control
+cook copy cord cork corn cough country cover cow crack
+cracker crate crayon cream creator creature credit crib crime 
+crow crowd crown crush cry cub cup current curtain curve cushion 
+day death debt decision deer|| degree design desire desk
+destruction detail development digestion dime dinner dinosaur
+direction dirt discovery discussion disease disgust distance
+distribution division dock doctor dog doll dolls donkey door
+downtown drain drawer dress drink driving drop drug drum duck ducks
+dust ear earth earthquake edge education effect egg eggnog elbow
+end engine error event example exchange existence expansion experience
+expert eye face fact fairy fall fan fang farm 
+faucet fear feast feather feeling feet fiction field fifth
+fight finger fire fish|| flag flame flavor flesh flight flock
+floor flower fly fog fold food foot force fork form fowl frame
+friction friend frog front fruit fuel furniture galley
+game garden gate ghost giant giraffe glass glove
+glue goat gold goldfish good-bye g|oose|eese government governor grade grain
+grape grass grip ground group growth guide
+guitar gun haddock|| hair haircut hall hammer hand harbor harmony hat hate
+head health hearing heart heat help hen herring|| hill history hobbies hole
+holiday home honey hook hope horn horse hose hospital hot hour
+house humor hydrant ice icicle idea impulse income increase
+industry ink insect instrument insurance interest invention iron
+island jail jam jar jeans jelly jellyfish jewel join joke journey
+judge juice jump kettle key kick kiss kite kitten kitty knee
+knife knot knowledge laborer lace ladybug lake lamp land language
+laugh lawyer lead leaf learning leather leg letter 
+lettuce level library lift light limit line linen lip liquid list
+lizard loaf lock locket look loss love lumber lunch lunchroom machine
+magic mailbox manager mango map marble mark market mask mass match
+meal measure meeting memory metal mice middle milk mind mine
+mint minute mist mitten money monkey month moon morning
+motion mountain m|ouse|ice mouth muscle music nail name nation neck need
+needle nerve nest net news night noise north nose note notebook number
+nut oatmeal observation ocean offer office oil operation opinion
+orange order organization ornament oven owl owner page pail
+pain paint pan pancake paper parcel parent park part partner party
+paste patch payment peace pear pen pencil pe|rson|ople pest pet piano||s
+pickle picture pie pies pig pin pipe pizzas place plane
+plant plantation plastic plate play playground pleasure
+plot plough pocket point poison polish pollution popcorn 
+position pot potato powder power price print prison process produce
+profit property prose protest pull pump punishment purpose push
+quarter quartz question quicksand quill quilt quince
+quiver rabbit rail railway rain rainstorm rake range rat rate
+ray reaction reading reason receipt recess record regret relation
+religion representative request respect rest reward rhythm rice riddle
+rifle ring river road robin rock rod roll roof room root rose
+route rub rule run sack sail salmon|| salt sand scale scarecrow scarf scene
+scent school science scissors screw sea seashore seat secretary seed
+selection sense shade shake shame shape sheep|| sheet shelf
+ship shirt shock shoe shop show side sidewalk sign silk silver
+sink size skate skin skirt sky sleep sleet slip
+slope smash smell smile smoke snail snake sneeze snow
+soap society sock soda sofa song sort sound soup space spade
+spark spiders sponge spoon spot spring spy squid|| square squirrel stage stamp
+staple star start statement station steam steel stem step stew stick
+stitch stocking stomach stone stop store story stove stranger
+straw stream street stretch string structure substance sugar
+suggestion suit summer sun support surprise sweater swim swine|| swing system
+table tail talk tank taste tax teaching team temper tendency
+tent territory test texture theory thing thought thread thrill
+throat throne thumb thunder ticket tiger time tin title toad toe 
+tomatoes tongue t|ooth|eeth toothbrush toothpaste top touch town toy 
+trade trail train tramp transport tray treatment tree 
+trick trip trouble trousers truck tub turkey turn twig twist
+umbrella underwear unit use vacation value van vase vegetable
+veil vein verse vessel vest view visitor voice volcano volleyball
+voyage walk wall war wash waste watch water wave wax way wealth
+weather week weight wheel whip whistle wilderness wind window wine
+wing winter wire wish wood wool word work worm wound wren
+wrench wrist writer writing yak yam yard yarn year yoke zebra zephyr
+zinc zipper zoo||s
+
