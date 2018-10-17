@@ -29,6 +29,8 @@ By default `correcthorse` will detect your locale and pick a word set that match
 
 To use the `correcthorse` module through the API create an instance of the `WordSet` using `WordSet(filename=None, locale=None, encoding='UTF-8')` and then call `random_phrase(word_count=4)`.
 
+[//]: # (PyPI STOP)
+
 ## Dictionary and grammar file format
 
 It is possible to provide `correcthorse` with new lists from which to draw the words of the passphrase. The strucutre of this is pretty simple; it is a sequence of blocks of text separated by one or more blank lines, with optional metadata lines starting with `#*` follow by a JSON object and optional (ignored) comment lines which start with just a `#` character.

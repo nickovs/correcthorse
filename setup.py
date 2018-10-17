@@ -1,7 +1,16 @@
-# Setup file for unificontrol
+#!/usr/bin/env python3
+
+# Setup file for correcthorse
 import setuptools
 
 import correcthorse
+
+with open("README.md", "r") as fh:
+    desc_lines = fh.readlines()
+    stops = [i for i,l in enumerate(desc_lines) if "PyPI STOP" in l]
+    if stops:
+        desc_lines = desc_lines[:stops[0]]
+    long_description = "".join(desc_lines)
 
 setuptools.setup(
     name="correcthorse",
@@ -9,6 +18,8 @@ setuptools.setup(
     author="Nicko van Someren",
     author_email="nicko@nicko.org",
     description="Secure but memorable passphrase generator",
+    long_description=long_description,
+    long_description_content_type="text/markdown",
     url="https://github.com/nickovs/correcthorse",
     packages=setuptools.find_packages(),
     classifiers=(
@@ -23,5 +34,6 @@ setuptools.setup(
         'console_scripts': [
             'correcthorse = correcthorse.__main__:main'
         ]
-    }
+    },
+    include_package_data=True,
 )

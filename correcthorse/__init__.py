@@ -25,7 +25,7 @@ import os
 
 from .plurals import Plurality
 
-__version__ = "0.1.0"
+__version__ = "0.1.1"
 
 # The default number of words in the passphrase
 DEFAULT_PP_LENGTH = 4
