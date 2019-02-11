@@ -49,7 +49,7 @@ The metadata for each block of words is provided as a JSON dictionary. The progr
 
 For words in groups with the `pluralise` key set true in their metadata, a locale-specific set of rules will be applied to try to create a plural form where necessary. Unfortunately many languages have many irregular words and the rules don't always work. In order to cope with this, irregular words can be added to the list in the form `stem|singular-suffix|plural-suffix`. Thus the word list for English includes `m|ouse|ice` because the word _mouse_ changes completely when plural, `piano||s`, because the plural form of _piano_ does not obey the usual rules for plurals ending in a vowel and `sheep||` because the plural of _sheep_ is _sheep_.
 
-## A warning about offensive prases
+## A warning about offensive phrases
 
 Some care has been taken to try to remove words that might result in offensive phrases, in particular by removing words that are generally pejorative and words that are specific to groups of people. That said, there is still a small chance that some of the phrases may be onsidered offensive by some people, or may be thought to be risqué as a result of some double entendre. Without having access to a fully sentient AI system it's not easy filter these out but hopefully they will be rare. 
 
