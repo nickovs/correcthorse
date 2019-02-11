@@ -16,15 +16,18 @@
 
 # SPDX-License-Identifier: Apache-2.0
 
-from . import WordSet, DEFAULT_PP_LENGTH
+from . import WordSet
 
 import argparse
 
 def main():
     parser = argparse.ArgumentParser(description='Generate random memorable passphrases')
-    parser.add_argument("-n", "--word-count", type=int,
-                        help="set the number of words in the passphrase",
-                        default=DEFAULT_PP_LENGTH)
+    parser.add_argument("-n", "--max-words", "--max-word-count", type=int,
+                        help="set the maximum number of words in the passphrase",
+                        default=None)
+    parser.add_argument("-N", "--max-letters", "--max-letter-count", type=int,
+                        help="set the maximum number of letters in the passphrase",
+                        default=None)
     parser.add_argument("-l", "--lower-case",
                         action='store_true',
                         help="print all words in lower case")
@@ -55,7 +58,8 @@ def main():
     args = parser.parse_args()
 
     wordset = WordSet(args.word_file, locale=args.locale)
-    words = wordset.random_phrase(args.word_count)
+    words = wordset.random_phrase(max_words=args.max_words,
+                                  max_letters=args.max_letters)
 
     if not args.lower_case:
         words = [w.capitalize() for w in words]

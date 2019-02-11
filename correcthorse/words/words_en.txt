@@ -49,7 +49,7 @@ proficient profitable pure puzzling qualified radiant refreshing
 regrettable remarkable repulsive resourceful respectable revered
 revolting righteous roguish saintly savage scrupulous select shadowy
 shady shimmering shocking significant sinister sizeable sleek sly
-sordid sparkling spectacular splendid succulent super superb superior
+sordid sparkling spectacular splendid squeamish succulent super superb superior
 tantalizing terrific topnotch trustworthy twinkling unbelievable
 unequalled unique unpleasant unrighteous unrivaled unscrupulous
 unsightly untrustworthy uppity upright upstanding vibrant vile
@@ -154,7 +154,7 @@ chrome crystalline denim linen mahogany obsidian
 # Correct Horse will try to correctly form the singular or plural form of words
 # in groups with the "pluralise" flag set. For irregular words the
 # stem, singular suffix and plural suffix can be provided separated
-# by a vertical bar, e.g. p|erson|eople, piano||s, sheep||
+# by a vertical bar, e.g. pe|rson|ople, piano||s, sheep||
   
 #* {"name":"nouns", "min":1, "max":2, "pluralise":true}
 account achievement acoustics|| act action activity actor addition
@@ -213,7 +213,7 @@ mint minute mist mitten money monkey month moon morning
 motion mountain m|ouse|ice mouth muscle music nail name nation neck need
 needle nerve nest net news night noise north nose note notebook number
 nut oatmeal observation ocean offer office oil operation opinion
-orange order organization ornament oven owl owner page pail
+orange order organization ornament ossifrage oven owl owner page pail
 pain paint pan pancake paper parcel parent park part partner party
 paste patch payment peace pear pen pencil pe|rson|ople pest pet piano||s
 pickle picture pie pies pig pin pipe pizzas place plane

@@ -25,10 +25,15 @@ import os
 
 from .plurals import Plurality
 
-__version__ = "0.1.1"
+__version__ = "0.2.0"
 
 # The default number of words in the passphrase
-DEFAULT_PP_LENGTH = 4
+DEFAULT_PP_WORD_COUNT = 4
+DEFAULT_PP_MAX_LETTERS = 20
+CRAZY_LONG_LENGTH = 256
+
+# The number of times we try to find a fitting word before giving up early
+WORD_TRYS = 5
 
 WordGroup = namedtuple("WordGroup", ['count', 'meta', 'words'])
 
@@ -41,7 +46,7 @@ class WordSet:
 
         if locale is None:
             locale = getlocale()[0]
-        
+
         self._pp = Plurality(locale)
 
         if filename is None:
@@ -52,7 +57,7 @@ class WordSet:
                 filename = os.path.join(words_dir, "words_{}.txt".format(locale.split("_")[0]))
             if not os.path.isfile(filename):
                 filename = os.path.join(words_dir, "words_en.txt")
-                
+
         self._ingest_file(filename)
 
     def _add_words(self, words):
@@ -92,13 +97,13 @@ class WordSet:
     @property
     def group_count(self):
         return len(self._group_list)
-                    
+
     def random_from_group(self, g):
         count, meta, l = g
         return l[randint(0, count-1)]
 
     def random_word(self):
-        return self.random_word_from_groups(range(self.group_count))
+        return self.random_word_from_lists(range(self.group_count))
 
     def random_word_from_lists(self, lists):
         sl = self._group_list
@@ -119,10 +124,28 @@ class WordSet:
         meta = self._group_list[index].meta
         return meta['max'] if 'max' in meta else word_count
 
-    def random_phrase(self, word_count=DEFAULT_PP_LENGTH):
-        # Initialise table of the remaining number we are allowed to pick 
+    def random_phrase(self, max_words=None,
+                      max_letters=None):
+        # Initialise table of the remaining number we are allowed to pick
         # from any given group
-        limits = dict((s.meta['name'], self._max_for_group(i, word_count))
+
+        if max_letters is None:
+            if max_words is None:
+                # Neither length limit nor word limit set
+                max_letters = DEFAULT_PP_MAX_LETTERS
+                # Effectively no limit to the number of words
+                max_words = DEFAULT_PP_MAX_LETTERS
+            else:
+                # Word count was set but no length limit set
+                max_letters = CRAZY_LONG_LENGTH
+        else:
+            if max_words is None:
+                max_words = max_letters
+            else:
+                # If both limits are given we obey both
+                pass
+
+        limits = dict((s.meta['name'], self._max_for_group(i, max_words))
                       for i, s in enumerate(self._group_list))
 
         # This sub-function is used to update limits
@@ -142,18 +165,29 @@ class WordSet:
                 for _ in range(mm):
                     r.append((group_index, self.random_from_group(group)))
                     handle_meta(group.meta)
-                    
+
+        letter_count = sum(len(word) for group, word in r)
         # Fill up the reaining words
-        while len(r) < word_count:
+        while len(r) < max_words:
             # Only draw from groups that have not reached their limits
             lists = [group_index
                      for group_index, group in enumerate(self._group_list)
                      if limits[group.meta['name']] > 0]
-            group_index, word = self.random_word_from_lists(lists)
+            # We try a few times to try to find a word that fits
+            for i in range(WORD_TRYS):
+                group_index, word = self.random_word_from_lists(lists)
+                if letter_count + len(word) <= max_letters:
+                    # It fits, so break out of the trying loop
+                    break
+            else:
+                # Failed after multiple trys, so give up
+                break
+
             handle_meta(self._group_list[group_index].meta)
             entry = (group_index, word)
             if entry not in r:
                 r.append(entry)
+                letter_count += len(word)
 
         # Find out if the last noun needs to be plural
         implied_count = set(group_index for group_index, word in r
@@ -166,12 +200,12 @@ class WordSet:
 
         # Sort only on group number, not word
         r.sort(key=lambda x:x[0])
-        
+
         # Find words that might need to be plural
         pluralise = [i for i, (group_index, word) in enumerate(r)
                      if ('pluralise' in self._group_list[group_index].meta
                          and self._group_list[group_index].meta['pluralise'])]
-        
+
         # Set all but the last one to singular
         for i in pluralise[:-1]:
             group_index, word = r[i]
@@ -180,6 +214,5 @@ class WordSet:
             i = pluralise[-1]
             group_index, word = r[i]
             r[i] = (group_index, self._pp.plurality(word, plural))
-        
-        return [word for group_index, word in r]
 
+        return [word for group_index, word in r]

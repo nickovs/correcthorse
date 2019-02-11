@@ -13,11 +13,12 @@ like a rotating code on a WiFi network.
 ### Command line
 
 ```
-correcthorse [-h] [-n WORD_COUNT] [-l] [-c] [-u] [-s] [-j] [-H]
+correcthorse [-h] [-n MAX_WORDS] [-N MAX_LETTERS] [-l] [-c] [-u] [-s] [-j] [-H]
                    [-S SEPARATOR] [-f FILENAME] [-L LOCALE]
 ```
 
-Use the `-n  WORD_COUNT` or `--word-count WORD_COUNT` option to set the number of words in the passphrase.
+Use the `-n  WORD_COUNT` or `--max_words WORD_COUNT` option to set the maximum number of words in the passphrase. Use the `-N  LETTER_COUNT` or `--max_letters LETTER_COUNT` option to set the maximum number of letters in the passphrase. You may set both
+
 
 The `-l` or `--lower-case` will cause all of the words in the passphrase to be printed in lower case while the `-c` or `--capitalise` flag will cause the first letter of each word to be capitalised. The default is to capitalise the first letter.
 
@@ -27,7 +28,7 @@ By default `correcthorse` will detect your locale and pick a word set that match
 
 ### Use as a python module
 
-To use the `correcthorse` module through the API create an instance of the `WordSet` using `WordSet(filename=None, locale=None, encoding='UTF-8')` and then call `random_phrase(word_count=4)`.
+To use the `correcthorse` module through the API create an instance of the `WordSet` using `WordSet(filename=None, locale=None, encoding='UTF-8')` and then call `random_phrase(max_words=4)`.
 
 [//]: # (PyPI STOP)
 
